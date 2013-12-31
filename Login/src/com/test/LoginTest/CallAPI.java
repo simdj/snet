@@ -1,6 +1,5 @@
 package com.test.LoginTest;
 
-//hi
 import java.util.ArrayList;
 
 import org.apache.http.NameValuePair;

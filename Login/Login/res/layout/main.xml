@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent"
+	  android:orientation="vertical"
+	  android:gravity="center_vertical|center_horizontal" 
+	  >
+	 
+	<Button
+	    android:id="@+id/btnPrefs"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:clickable="false"
+	    android:gravity="center_vertical|center_horizontal"
+	    android:text="현황" />
+	 
+	<Button
+	    android:id="@+id/btnGetPreferences"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:clickable="false"
+	    android:text="판매" />
+
+	<Button
+	    android:id="@+id/list_btn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="영업" />
+
+	<Button
+	    android:id="@+id/logout_btn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="로그아웃" />
+	 
+	</LinearLayout>

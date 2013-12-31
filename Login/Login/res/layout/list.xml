@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- for adding -->
+
+    <RelativeLayout
+        android:id="@+id/vEntire"
+        android:background="#00ff00ff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/llDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/etStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="startDate" />
+
+            <EditText
+                android:id="@+id/etEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="endDate" />
+
+            
+
+            <Button
+                android:id="@+id/btnShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="조회 " />
+        </LinearLayout>
+        
+        <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llDate"
+                android:text="일정추가 " />
+        
+
+        <ListView
+            android:id="@+id/MyList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/btnAdd"
+            android:descendantFocusability="beforeDescendants" >
+        </ListView>
+        <!-- android:descendantFocusability : listview보다 그 내부에 있는 애들이 먼저 focus되게 -->
+
+    </RelativeLayout>
+    <!-- for detail -->
+
+    <RelativeLayout
+        android:id="@+id/DetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/detail_layout_line" >
+
+        <LinearLayout
+            android:id="@+id/DetailPlanLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dip"
+            android:background="@drawable/rounded_line" >
+
+            <TextView
+                android:id="@+id/DetailPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:text="계획 :"
+                android:textColor="#ffffffff"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/EditDetailPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="94"
+                android:background="@drawable/rounded_border"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="7"
+                android:maxLines="7"
+                android:textColor="#ffffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/DetailResultLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/DetailPlanLayout"
+            android:layout_margin="8dip"
+            android:background="@drawable/rounded_line" >
+
+            <TextView
+                android:id="@+id/DetailResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:text="결과 :"
+                android:textColor="#ffffffff"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/EditDetailResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="94"
+                android:background="@drawable/rounded_border"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:maxLines="5"
+                android:textColor="#ffffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="8dip"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/DetailCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dip"
+                android:layout_weight="45"
+                android:background="@drawable/rounded_line"
+                android:text="취소"
+                android:textColor="#ffffffff" />
+
+            <Button
+                android:id="@+id/DetailEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dip"
+                android:layout_weight="45"
+                android:background="@drawable/rounded_line"
+                android:text="수정"
+                android:textColor="#ffffffff" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
